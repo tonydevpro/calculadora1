@@ -1,0 +1,101 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e1e1e;
+}
+
+.geral {
+  width: 100%;
+  max-width: 400px;
+  min-width: 300px;  /* 🚀 Evita que fique muito pequena */
+  background: #f44336;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.display {
+  width: 100%;
+  min-height: 70px;
+  background-color: #222;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: white;
+  border-radius: 10px;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  word-break: break-all;
+}
+
+.teclado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.teclas {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.bt {
+  width: 22%;
+  height: 60px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ff9800;
+  color: white;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt:hover {
+  background-color: #e68900;
+  transform: scale(1.07);
+}
+
+.bt:active {
+  transform: scale(0.95);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 400px) {
+  .geral {
+    width: 95%;
+    min-width: 280px;
+  }
+  
+  .display {
+    font-size: 1.5rem;
+    min-height: 60px;
+  }
+
+  .bt {
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}
